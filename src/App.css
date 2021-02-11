@@ -1,38 +1,199 @@
-.App {
-  text-align: center;
+input:focus {
+  outline: none !important;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.player__body {
   display: flex;
-  flex-direction: column;
+}
+.sidebar {
+  flex: 0.2;
+  padding: 30px;
+  height: 100vh;
+  color: white;
+  min-width: 230px;
+  background-color: #040404;
+}
+.sidebar > hr {
+  border: 1px solid #282828;
+  width: 90%;
+  margin: 10px auto;
+}
+.sidebar__logo {
+  height: 100px;
+  width: auto;
+  padding: 10px;
+  margin: auto;
+}
+.sidebar__title {
+  margin-left: 5px;
+  padding: 5px;
+  font-size: 12px;
+}
+.sidebarOption {
+  height: 70px;
+  color: gray;
+  display: flex;
+  cursor: pointer;
+  position: relative;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  transition: 200ms color ease-in;
+}
+.sidebarOption:hover {
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.sidebarOption__icon {
+  padding-left: 10px;
+  padding-right: 10px;
+  height: 50px;
+  width: 40px;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.sidebarOption > p {
+  margin-top: 10px;
+  margin-left: 20px;
+  font-size: 14px;
+}
+.body {
+  height: 100vh;
+  flex: 0.8;
+  color: white;
+  padding: 30px;
+  background: linear-gradient(rgb(91, 87, 115), rgba(0, 0, 0, 1));
+  overflow-y: overlay;
+}
+.body::-webkit-scrollbar {
+  display: none;
+}
+.body__info {
+  display: flex;
+  align-items: flex-end;
+  padding: 10px;
+}
+.body__infoText {
+  flex: 1;
+}
+.body__infoText > h2 {
+  font-size: 48px;
+  margin-bottom: 10px;
+}
+.body__infoText > p {
+  font-size: 14px;
+}
+.body__info > img {
+  height: 15vw;
+  margin: 0 15px;
+}
+.body__icons {
+  display: flex;
+  align-items: center;
+}
+.body__icons > .MuiSvgIcon-root {
+  margin-right: 20px;
+}
+.body__shuffle {
+  font-size: 80px !important;
+  margin-left: 50px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.body__shuffle:hover {
+  transition: 100ms transform ease-in;
+  transform: scale(1.08);
+}
+.body__songs {
+  margin: 20px -30px;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+.header__left {
+  background-color: white;
+  color: gray;
+  min-width: 80px;
+  border-radius: 30px;
+  padding: 10px;
+  align-items: center;
+  display: flex;
+  flex: 0.5;
+}
+.header__left > input {
+  border: none;
+  width: 100%;
+}
+.songRow {
+  z-index: 100;
+  padding: 20px;
+  display: flex;
+  display: flex;
+  color: white;
+  margin-left: 20px;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.songRow:hover {
+  background-color: black;
+  opacity: 0.8;
+}
+.songRow__info {
+  margin-left: 20px;
+}
+.songRow__info > h1 {
+  font-size: 16px;
+}
+.songRow__info > p {
+  font-size: 14px;
+  margin-top: 3px;
+  color: gray;
+}
+.songRow__album {
+  height: 65px;
+  width: 55px;
+}
+.small__icon {
+  height: 25px;
+  width: 25px;
+  margin: 8px;
+}
+.app-loader {
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  position: fixed;
+  padding: 25% 50%;
+  background-color: transparent;
+}
+.flex-justified {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.flex-between {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.flex-align-items {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.illustration-sizing {
+  width: 40%;
+  margin-top: 40px;
+}
+.illustration-sizing-small {
+  width: 100%;
+  margin-top: 40px;
+}
+.flex-row {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+.pointer {
+  cursor: pointer;
 }

@@ -1,26 +1,22 @@
-import React from 'react';
-import logo from './logo.svg';
+import { FC, useState } from 'react';
+
+import { AlbumProvider } from './shared/contexts/albumContext';
+
+import Explore from './components/Explore';
+import Sidebar from './components/Sidebar';
+
 import './App.css';
 
-function App() {
+const Dashboard: FC<any> = (): any => {
+  const [selectedAlbumList, setSelectedAlbumList] = useState([]);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <AlbumProvider value={{ setSelectedAlbumList, selectedAlbumList }}>
+      <div className="player__body">
+        <Sidebar />
+        <Explore />
+      </div>
+    </AlbumProvider>
   );
-}
+};
 
-export default App;
+export default Dashboard;
