@@ -12,10 +12,12 @@ const Body: FC<any> = (): any => {
   const [searchText, setSearchText] = useState('');
   const [isLoading, setIsLoading] = useState(false);
 
+  // will fetch from api on every change in search text
   useEffect(() => {
     searchText !== '' ? handleSearch(searchText) : setAlbumList([]);
   }, [searchText]);
 
+  // fetching response from iTunes based on search text
   const handleSearch = (text: string) => {
     setIsLoading(true);
     const defaultOptions = {

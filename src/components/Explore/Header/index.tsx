@@ -11,6 +11,7 @@ const Header: FC<any> = ({ searchText, setSearchText }: any): any => {
         />
         <input
           type="text"
+          name="searchArtist"
           value={searchText}
           placeholder="Search for Artists"
           onChange={(event) => setSearchText(event.target.value)}

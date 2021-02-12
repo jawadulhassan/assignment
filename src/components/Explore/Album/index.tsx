@@ -8,6 +8,7 @@ const Album: FC<any> = ({ track }: any): any => {
 
   const [selectedRow, setSelectedRow] = useState(false);
 
+  // adding item into global context for keeping track of favourites
   const selectionHandler = (item: any) => {
     const { selectedAlbumList, setSelectedAlbumList } = albumSelector;
     let itemFound =
@@ -44,7 +45,7 @@ const Album: FC<any> = ({ track }: any): any => {
           className="flex-align-items pointer"
           onClick={(): void => selectionHandler(track)}
         >
-          <p>Add to Albums</p>
+          <p>Add to Favourites</p>
           <img
             className="small__icon"
             src="static/images/add.svg"

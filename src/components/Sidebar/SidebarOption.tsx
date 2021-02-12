@@ -16,12 +16,11 @@ const SidebarOption: FC<any> = ({
       onMouseLeave={(): void => setSelectedRow(false)}
     >
       {!!icon && <img src={icon} alt="" className="sidebarOption__icon" />}
-      <p>{title}</p>
+      <p style={{ width: '60%' }}>{title}</p>
       {selectedRow && searchText === '' && (
         <div
-          className="pointer"
+          className="pointer remove-wrapper"
           onClick={(): void => deleteHandler(index)}
-          style={{ position: 'absolute', right: 20, top: 10 }}
         >
           <img
             className="small__icon"
